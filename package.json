@@ -10,9 +10,10 @@
         "start": "node dist/index.js",
         "build": "tsc",
         "dev": "nodemon src/index.ts",
-        "test:v1": "jest src/v1/tests"
+        "test:v1": "jest src/v1/tests --config src/v1/tests/config.ts"
     },
     "devDependencies": {
+        "@tsdoc-test-reporter/jest": "^0.0.33",
         "@types/bcrypt": "^5.0.2",
         "@types/cors": "^2.8.17",
         "@types/express": "^4.17.21",
