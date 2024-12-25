@@ -59,10 +59,10 @@ export const refreshToken = async (user: TUser) => {
     const accessToken = createAccessToken({ id: user.id, email: user.email });
     const refreshToken = createRefreshToken({ id: user.id, email: user.email });
 
-    // await client.user.update({
-    //     where: { id: user.id },
-    //     data: { refreshToken },
-    // });
+    await client.user.update({
+        where: { id: user.id },
+        data: { refreshToken },
+    });
 
     return { accessToken, refreshToken };
 };
