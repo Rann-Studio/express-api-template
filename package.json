@@ -10,7 +10,7 @@
         "start": "node dist/index.js",
         "build": "tsc",
         "dev": "nodemon src/index.ts",
-        "test:v1": "jest src/v1/tests --config src/v1/tests/config.ts"
+        "test:v1": "jest src/v1/tests --detectOpenHandles --config src/v1/tests/config.ts"
     },
     "devDependencies": {
         "@tsdoc-test-reporter/jest": "^0.0.33",

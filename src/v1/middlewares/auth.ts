@@ -51,6 +51,7 @@ export const checkRefreshToken = async (req: TRequest, res: Response, next: Next
         });
 
         req.user = user;
+        next();
     } catch (error) {
         handleError(error, next);
     }
